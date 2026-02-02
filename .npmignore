@@ -1,0 +1,24 @@
+# Source files (included in build)
+src/
+*.scss
+*.css
+
+# Config files
+vite.config.ts
+tsconfig*.json
+
+# Development
+node_modules/
+.env*
+*.log
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+.npmignore
+
+# Dist cleanup
+dist/**/*.map
+

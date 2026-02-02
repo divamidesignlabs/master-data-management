@@ -1,0 +1,40 @@
+.master-form {
+  padding: 24px;
+  
+  .form-section {
+    padding: 24px;
+  }
+  
+  .form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  
+  .form-field {
+    min-width: 300px;
+    
+    .field-label {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .field-input {
+      width: 300px;
+    }
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+}
