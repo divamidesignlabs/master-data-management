@@ -1,5 +1,5 @@
 {
-  "name": "master-data-management-react",
+  "name": "@divami-labs/master-data-management-react",
   "version": "0.0.1",
   "description": "A flexible, configurable React package for managing master data with dynamic forms and tables",
   "type": "module",
