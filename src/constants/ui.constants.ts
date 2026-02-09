@@ -15,7 +15,7 @@ export const PAGE_TITLES = {
 export const BUTTON_LABELS = {
   VIEW: 'View',
   ADD_NEW_RECORD: 'Add New Record',
-  EDIT: 'Edit',
+  EDIT: 'Edit Record',
   CREATE: 'Create',
   UPDATE: 'Update',
   CANCEL: 'Cancel',

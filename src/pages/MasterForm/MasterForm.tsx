@@ -383,6 +383,12 @@ const MasterForm = ({
                                 variant="contained" 
                                 onClick={handleSubmit}
                                 disabled={loading}
+                                sx={{
+                                width: 180,
+                                height: 40,
+                                minWidth: 180,
+                                fontWeight: 'normal',
+                            }}
                             >
                                 {loading ? <CircularProgress size={24} /> : mode === FORM_MODES.CREATE ? BUTTON_LABELS.CREATE : BUTTON_LABELS.UPDATE}
                             </Button>
@@ -390,12 +396,23 @@ const MasterForm = ({
                                 variant="outlined" 
                                 onClick={() => onBack?.()}
                                 disabled={loading}
+                                sx={{
+                                width: 180,
+                                height: 40,
+                                minWidth: 180,
+                                fontWeight: 'normal',
+                            }}
                             >
                                 {BUTTON_LABELS.CANCEL}
                             </Button>
                         </>
                     ) : (
-                        <Button variant="outlined" onClick={() => onBack?.()}>
+                        <Button variant="outlined"  sx={{
+                                width: 180,
+                                height: 40,
+                                minWidth: 180,
+                                fontWeight: 'normal',
+                            }} onClick={() => onBack?.()}>
                             {BUTTON_LABELS.BACK}
                         </Button>
                     )}

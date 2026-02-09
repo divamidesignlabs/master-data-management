@@ -77,7 +77,6 @@ const ServerSideGrid = <T extends object>({
             return;
         }
 
-        console.log('Sort Changed Event (User Initiated):', event);
         if (!setSort) return;
 
         const newSortModel = event.api
@@ -88,7 +87,6 @@ const ServerSideGrid = <T extends object>({
                 sort: col.sort as typeof SORT_SETTINGS[keyof typeof SORT_SETTINGS],
             }));
 
-        console.log('New Sort Model:', newSortModel);
         
         // Check if sort actually changed to prevent duplicate calls
         const sortChanged = JSON.stringify(newSortModel) !== JSON.stringify(lastSortModel.current);
@@ -141,9 +139,12 @@ const ServerSideGrid = <T extends object>({
                         onSortChanged={handleSortChanged}
                         suppressAutoSize={true}
                         suppressColumnMoveAnimation={true}
+                        rowSelection={undefined}
+                        suppressRowClickSelection={true}
+                        suppressCellFocus={true}
 
                         defaultColDef={{
-                            width: 170,
+                            width: 300,
                             sortable: true,
                             unSortIcon: true,
                             tooltipValueGetter: (params) =>

@@ -1,6 +1,6 @@
 {
   "name": "master-data-management-react",
-  "version": "0.1.8",
+  "version": "0.0.1",
   "description": "A flexible, configurable React package for managing master data with dynamic forms and tables",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -36,31 +36,31 @@
     "prepublishOnly": "npm run build:lib"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "@mui/material": "^5.0.0 || ^6.0.0 || ^7.0.0",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-   "ag-grid-community": ">=30.0.0",
-   "ag-grid-react": ">=30.0.0"
-
+    "@mui/material": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "ag-grid-community": ">=30.0.0",
+    "ag-grid-react": ">=30.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0"
   },
   "dependencies": {
+    "@mui/icons-material": "^7.3.7",
     "axios": "^1.13.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react-swc": "^4.2.2",
-    "vite": "^7.2.4",
-    "typescript": "~5.9.3",
-    "@types/node": "^24.10.1",
     "eslint": "^9.39.1",
-    "@eslint/js": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "sass": "^1.97.2"
+    "sass": "^1.97.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
   }
 }
