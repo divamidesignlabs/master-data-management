@@ -1,55 +1,117 @@
 .master-view {
   padding: 24px;
-  
+  background-color: #f9fafb;
+
   .filter-section {
-    padding: 24px;
+    padding: 24px 32px;
     margin-bottom: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
   }
-  
+
   .filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    margin: 16px 0;
+    gap: 24px;
+    margin-top: 16px;
   }
-  
+
   .filter-field {
-    min-width: 300px;
-    
+    min-width: 280px;
+
     .field-label {
-      margin-bottom: 8px;
+      font-size: 14px;
       font-weight: 500;
+      color: #5b6fae;
+      margin-bottom: 6px;
     }
-    
+
     .field-input {
-      width: 300px;
+      width: 280px;
+
+      .MuiOutlinedInput-root {
+        height: 40px;
+        border-radius: 8px;
+
+        fieldset {
+          border-color: #cfd3e3;
+        }
+
+        &:hover fieldset {
+          border-color: #9aa4d6;
+        }
+
+        &.Mui-focused fieldset {
+          border-color: #5b6fae;
+        }
+      }
+
+      input {
+        font-size: 14px;
+      }
     }
   }
-  
+
   .action-buttons {
     display: flex;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 24px;
   }
-  
+
+  .primary-btn {
+    height: 36px;
+    min-width: 120px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-transform: none;
+    background-color: #2f2f2f;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #1f1f1f;
+    }
+  }
+
+  .secondary-btn {
+    height: 36px;
+    min-width: 120px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-transform: none;
+    color: #2f2f2f;
+    border: 1px solid #2f2f2f;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  .grid-section {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
   .loading-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 300px;
   }
-  
-  .grid-section {
-    padding: 16px;
-  }
-  
+
   .pagination-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 16px;
     padding: 8px 0;
-    
+
     .page-buttons {
       display: flex;
       gap: 16px;

@@ -17,19 +17,34 @@ export const GridContainer = styled("div")(({ theme }) => ({
   },
   "& .ag-theme-alpine": {
     fontFamily: theme.typography.fontFamily,
+    "--ag-border-color": "#e0e0e0",
+    "--ag-row-border-color": "#e0e0e0",
+    "--ag-header-background-color": "#f5f5f5",
+    "--ag-odd-row-background-color": "#ffffff",
+    "--ag-row-hover-color": "rgba(0, 0, 0, 0.04)",
   },
   "& .ag-header-cell-text": {
     fontSize: "14px",
-    fontWeight: 400,
-    color: "#333",
+    fontWeight: 500,
+    color: "#1f2937",
   },
   "& .ag-cell": {
     fontSize: "14px",
     fontWeight: 400,
-    color: "#000",
+    color: "#374151",
     padding: "12px 16px",
     display: "flex",
     alignItems: "center",
+    // borderRight: "1px solid #e0e0e0",
+  },
+  "& .ag-row-selected": {
+    backgroundColor: "transparent !important",
+  },
+  "& .ag-row-selected::before": {
+    display: "none !important",
+  },
+  "& .ag-row:hover": {
+    backgroundColor: "rgba(0, 0, 0, 0.04) !important",
   },
   "& .right-aligned-cell": {
     textAlign: "right",
@@ -50,6 +65,10 @@ export const GridContainer = styled("div")(({ theme }) => ({
   },
   "& .ag-cell:focus, .ag-cell:focus-within": {
     border: "1px solid transparent !important",
+    outline: "none !important",
+  },
+  "& .ag-ltr .ag-cell:last-child": {
+    borderRight: "none",
   },
 }));
 
@@ -109,12 +128,15 @@ export const StyledAgGridWrapper = styled(Box)<StyledAgGridWrapperProps>(
     }),
     "&.ag-theme-alpine": {
       border: "none !important",
+      borderRadius: "8px",
+      overflow: "hidden",
     },
     ".ag-root-wrapper": {
       border: "none !important",
+      borderRadius: "8px",
     },
     ".ag-header": {
-      borderBottom: "none !important",
+      // borderBottom: "none !important",
       backgroundColor: "#f5f5f5",
     },
     ".ag-body-viewport": {
@@ -136,6 +158,9 @@ export const StyledAgGridWrapper = styled(Box)<StyledAgGridWrapperProps>(
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+    },
+    ".ag-header-cell:last-child": {
+      borderRight: "none",
     },
   })
 );

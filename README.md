@@ -1,5 +1,5 @@
 
-# master-data-management-react
+# @divami-labs/master-data-management-react
 
 A reusable **React library** for managing master data using **metadata-driven forms and tables**.  
 It automatically generates grids and forms while letting you fully control **APIs, routing, and authentication**.
@@ -25,7 +25,7 @@ It automatically generates grids and forms while letting you fully control **API
 ## 📦 Installation
 
 ```bash
-npm install master-data-management-react
+npm install @divami-labs/master-data-management-react
 ````
 
 ---
@@ -45,7 +45,7 @@ ag-grid-react ag-grid-community
 **⚠️ IMPORTANT:** Configure your axios instance with a `baseURL` to ensure dropdown options and all API calls go to your backend API, not your frontend. See [CLIENT_AXIOS_SETUP.md](./CLIENT_AXIOS_SETUP.md) for detailed setup.
 
 ```tsx
-import { MasterView } from "master-data-management-react";
+import { MasterView } from "@divami-labs/master-data-management-react";
 import axios from "axios";
 
 // ✅ CRITICAL: Configure axios with baseURL
@@ -88,8 +88,8 @@ export default function App() {
 ## 📝 Forms (Create / View / Edit)
 
 ```tsx
-import { MasterForm } from "master-data-management-react";
-import { FORM_MODES } from "master-data-management-react/constants";
+import { MasterForm } from "@divami-labs/master-data-management-react";
+import { FORM_MODES } from "@divami-labs/master-data-management-react/constants";
 
 <MasterForm
   apiClient={apiClient}
@@ -123,7 +123,7 @@ You define routes however your application prefers.
 Import styles **once** in your app entry file:
 
 ```ts
-import "master-data-management-react/dist/style.css";
+import "@divami-labs/master-data-management-react/dist/style.css";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 ```
